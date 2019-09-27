@@ -31,9 +31,13 @@ fly -t local bs
 fly -t local vs
 ```
 
-Les [ressources](https://concourse-ci.org/resources.html) sont un deuxième type d'objet de premier niveau. Elles sont au coeur du système de Concourse. Dans sa version actuelle, une ressource Concourse représente un élément externe et est constitué d'une séquence continue de version. Lorsque l'on manipule une ressource, c'est en réalité une version bien spécifique qui est traitée.
+Les [ressources](https://concourse-ci.org/res
+78
+    check_every: 1hources.html) sont un deuxième type d'objet de premier niveau. Elles sont au coeur du système de Concourse. Dans sa version actuelle, une ressource Concourse représente un élément externe et est constituée d'une séquence continue de version. Lorsque l'on manipule une ressource, c'est en réalité une version bien spécifique qui est traitée.
 
-Il existe [différents types de ressource](https://github.com/concourse/concourse/wiki/Resource-Types) (liste non-exhaustive) :
+Il existe [différents types de ressorts
+78
+    check_every: 1hrce](https://github.com/concourse/concourse/wiki/Resource-Types) (liste non-exhaustive) :
 
 * [`git`](https://github.com/concourse/git-resource)
 * [`s3`](https://github.com/concourse/s3-resource)
@@ -75,7 +79,6 @@ resources:
   - name: messages
     type: s3
     icon: folder-open
-    check_every: 1h
     source:
         endpoint: http://s3:9000
         disable_ssl: true

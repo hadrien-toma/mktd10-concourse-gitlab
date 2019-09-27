@@ -31,7 +31,7 @@ fly -t local bs
 fly -t local vs
 ```
 
-Les [ressources](https://concourse-ci.org/resources.html) sont un deuxième type d'objet de premier niveau. Elles sont au coeur du système de Concourse. Dans sa version actuelle, une ressource Concourse représente un élément externe et est constitué d'une séquence continue de version. Lorsque l'on manipule une ressource, c'est en réalité une version bien spécifique qui est traitée.
+Les [ressources](https://concourse-ci.org/resources.html) sont un deuxième type d'objet de premier niveau. Elles sont au coeur du système de Concourse. Dans sa version actuelle, une ressource Concourse représente un élément externe et est constituée d'une séquence continue de versions. Lorsque l'on manipule une ressource, c'est en réalité une version bien spécifique qui est traitée.
 
 Il existe [différents types de ressource](https://github.com/concourse/concourse/wiki/Resource-Types) (liste non-exhaustive) :
 
@@ -94,7 +94,7 @@ jobs:
             file: messages/message-*.txt
 ```
 
-Enfin, notez qu'il est possible d'utiliser des noms différents entre les entrées/sorties d'une tâche et les ressources utilisées. Pour cela au niveau de l'étape `task` du _pipeline_, il utiliser les propriétés `input_mapping`/`output_mapping` qui sont des dictionnaires sont les clés sont les noms utilisés par la tâche et les valeurs les noms utilisés par le _pipeline_.
+Enfin, notez qu'il est possible d'utiliser des noms différents entre les entrées/sorties d'une tâche et les ressources utilisées. Pour cela au niveau de l'étape `task` du _pipeline_, il faut utiliser les propriétés `input_mapping`/`output_mapping` qui sont des dictionnaires dont les clés sont les noms utilisés par la tâche et les valeurs les noms utilisés par le _pipeline_.
 
 ```yaml
 jobs:
